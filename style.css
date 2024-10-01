@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Karla", sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+    height: 120vh;
+    background-color: var(--Greymedium);
+}
+:root{
+--Greenlighter: hsl(148, 38%, 91%);
+--Greenmedium:hsl(169, 82%, 27%);
+--Red: hsl(0, 66%, 54%);
+--White: hsl(0, 0%, 100%);
+--Greymedium: hsl(186, 15%, 59%);
+--Greydarker: hsl(187, 24%, 22%);
+}
+header .container{
+    margin: 100px 460px;
+}
+header .container .alert{
+    background-color: var(--Greydarker);
+    border-radius: 10px;
+    width: 450px;
+    height: 100px;
+    padding: 20px;
+    position: absolute;
+    transition: all 0.8s;
+    top: -100px;
+    z-index: 5;
+}
+header .container .alert.active{
+    top:20px;
+    left: 475px;
+}
+header .container .alert img{
+    margin-top: 5px;
+}
+header .container .alert label{
+    color: var(--White);
+    margin: 0 0 0px 5px;
+}
+header .container .alert p{
+    color: var(--White);
+    margin-top:10px;
+}
+main .container{
+    margin:50px 450px;
+}
+main .container .contact_form{
+    background-color: var(--White);
+    width: clamp(500px,60%,600px);
+    max-height: 700px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+main .container .contact_form h1{
+    font-weight: 600;
+    font-family: "Karla";
+    margin: 30px 0 20px 0px;
+}
+main .container .contact_form form div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+main .container .contact_form form  div .first {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+main .container .contact_form form  div .first .lafir{
+    display: inline-block;
+}
+main .container .contact_form form  div .first #firstname{
+    display: block;
+    border-radius: 10px;
+    padding: 10px 25px;
+    width: 220px;
+}
+main .container .contact_form form  div .first .valfir{
+    display: block;
+    color: var(--Red);
+    font-weight: 400;
+    font-size: 14px;
+}
+main .container .contact_form form div .last{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+main .container .contact_form form div .last .lalas{
+    display: block;
+}
+main .container .contact_form form div .last #lastname{
+    display: block;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 220px;
+}
+main .container .contact_form form div .last .vallas{
+    display: block;
+    color: var(--Red);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+main .container .contact_form form .laema{
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 400;
+    margin: 10px 0;
+}
+main .container .contact_form form #email{
+    display: block;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+main .container .contact_form form .valema{
+    display: block;
+    color: var(--Red);
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0;
+}
+main .container .contact_form form  .querytype{
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 400;
+    margin: 10px 0;
+}
+main .container .contact_form form .query{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+main .container .contact_form form .query .checgen{
+    border: 1px solid var(--Greydarker);
+    padding: 10px;
+    width: 220px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+main .container .contact_form form .query .checgen::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--Greydarker);
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+}
+main .container .contact_form form .query .checgen.active{
+    background-color: var(--Greenlighter);
+    border-color: var(--Greenmedium);
+}
+main .container .contact_form form .query .checgen .icon-checkbox{
+    border-radius: 50%;
+    background-color: var(--Greenmedium);
+    width: 10px;
+    display:none ;
+    transition: all 0.6s;
+}
+main .container .contact_form form .query .checgen .icon-checkbox.active{
+    display: block;
+    margin-top: 2px;
+}
+main .container .contact_form form .query .checgen .labgen{
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 15px;
+}
+main .container .contact_form form .query .checgen .labgen.active{
+    margin-left: 0;
+}
+main .container .contact_form form .query .checsup{
+    border: 1px solid var(--Greydarker);
+    padding: 10px;
+    width: 220px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+main .container .contact_form form .query .checsup::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--Greydarker);
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+}
+main .container .contact_form form .query .checsup.active{
+    background-color: var(--Greenlighter);
+    border-color: var(--Greenmedium);
+}
+main .container .contact_form form .query .checsup .labsup{
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 15px;
+}
+main .container .contact_form form .query .checsup .labsup.active{
+    margin-left: 0;
+}
+main .container .contact_form form .query .checsup .icon-che{
+    border-radius: 50%;
+    background-color: var(--Greenmedium);
+    width: 10px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.6s;
+}
+main .container .contact_form form .query .checsup .icon-che.active{
+    display: block;
+    margin-top: 2px;
+}
+main .container .contact_form form .please{
+    display: block;
+    color: var(--Red);
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0;
+}
+main .container .contact_form form .texmes{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+main .container .contact_form form .texmes #Message{
+    width: 100%;
+    border-radius: 10px;
+    appearance: none;
+    outline: none;
+}
+main .container .contact_form form .texmes .labtex{
+    display: block;
+    color: var(--Red);
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0;
+}
+.consent{
+    display: inline-block;
+    margin:0 0 0 30px;
+    cursor: pointer;
+}
+.consent::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color:#ffffff;
+    border: 2px solid #dfdddd;
+    position: absolute;
+    left:20px;
+    z-index: 1;
+    cursor: pointer;
+}
+.consent.active::before{
+    background-color:#0c7d69;
+}
+
+.checkbox{
+    display: inline-block;
+    display: block;
+    color: var(--Red);
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.submit{
+    padding: 10px 20px;
+    width: 100%;
+    background-color: var(--Greenmedium);
+    color: var(--White);
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.submit:focus{
+    background-color: var(--Greydarker);
+}
+.fa-check{
+    position:absolute ;
+    left: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    margin: 2px 0 0 3px;
+    z-index: 2;
+    cursor: pointer;
+}
+/* media query */
+@media(max-width:1024px){
+    main .container {
+        margin: 50px 263px;
+      }
+      header .container .alert.active {
+        left: 288px;
+      }
+}
+@media(max-width:768px){
+    header .container .alert.active {
+        left: 166px;
+      }
+    main .container {
+        margin: 50px 139px;
+      }
+}
+@media(max-width:480px){
+    header .container .alert.active {
+        left: 16px;
+      }
+    main .container .contact_form form div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+    main .container {
+        margin: 50px 15px;
+      }
+      main .container .contact_form {
+        width: clamp(450px,60%,600px);
+        max-height: 800px;
+      }
+      
+    main .container .contact_form form div .first #firstname {
+  width: 400px;
+  }
+  main .container .contact_form form div .last #lastname {
+    width: 400px;
+  }
+}
+@media(max-width:375px){
+    header .container .alert.active {
+        left: 15px;
+        width: 350px;
+      }
+      main .container .contact_form {
+        width: clamp(350px,60%,370px);
+        height: 830px;
+      }
+      main .container .contact_form form div .first #firstname {
+        width: 320px;
+      }
+      main .container .contact_form form div .last #lastname {
+        width: 320px;
+      }
+}
+@media(max-width:350px){
+    header .container .alert.active {
+        left: 15px;
+        width: 320px;
+      }
+      main .container .contact_form {
+        width: clamp(320px,60%,350px);
+      }
+      main .container .contact_form form div .first #firstname {
+        width: 285px;
+      }
+      main .container .contact_form form div .last #lastname {
+        width: 285px;
+      }
+}
